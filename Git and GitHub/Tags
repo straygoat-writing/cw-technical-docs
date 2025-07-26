@@ -9,8 +9,7 @@ Tags are labels that consist of a name and description and you apply them to a c
 
 A tag is for a snapshot of the entire repository at a given point in time. It is for the commit, not individual files and folders.
 
-You cannot use the same tag on different commits. Each tag has to be unique. 
-
+You cannot use the same tag on different commits. Each tag has to be unique.
 
 ## How to create a tag
 
@@ -63,12 +62,13 @@ Oh yes. Next question.
 ## How to delete a tag
 
 To delete a tag in Visual Studio Code:
+
 1. Install the Git Graph extension in Visual Code Studio.
 2. Select the **Source Control** icon in the side menu.
 3. Expand the **Graph** section.  
 4. Right-click on the relevant commit and select **Delete Tag**.
 
-    ![Screenshot of Git Graph extension for Visual Studio Code. It has a Create tag option.](./Media/delete-tag.jpg)
+    ![Screenshot of Git Graph extension for Visual Studio Code. It has a Delete tag option.](./Media/delete-tag.jpg)
 
 5. Select the tag you want to remove.
 
@@ -76,7 +76,7 @@ To delete a tag in Visual Studio Code:
 
 If you prefer to use a terminal command to delete a tag:
 
-* Use `git tag -d tagname` to delete the tag locally on your computer, where tagname is the name of the tag you want to remove. For example, `git tag -d v3.2`
+* Use `git tag -d tagname` to delete the tag locally on your computer, where `tagname` is the name of the tag you want to remove. For example, `git tag -d v3.2`
 * Use `git push origin --delete tagname` to delete a tag from your remote repository (if it has already been "pushed" to your repository).
 
 You don't need to find the specific commit first, as the tag can only exist on one commit anyway. 
