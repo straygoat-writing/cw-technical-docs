@@ -1,0 +1,92 @@
+# Links
+
+There are two ways to add links in markdown:
+
+* Inline links
+* Reference links.
+
+## Inline links
+
+Inline links are where you include the link text and the target URL in the body of your text.
+
+Use square brackets for the text for the link. Use parenthesis for the URL.
+
+```markdown
+[Google](https://www.google.com)
+```
+
+Link to an external site: [Google](https://www.google.com)
+
+You can also use angle brackets for website links and email links:
+
+```markdown
+<https://www.straygoat.co.uk>
+<craigwright@straygoat.co.uk>
+
+```
+
+Results in:
+<https://www.straygoat.co.uk>
+<craigwright@straygoat.co.uk>
+
+## Reference links
+
+Reference links are a tidier way of including links in your Markdown. Rather than include the full URL for a page every time you link to it, you create a shorter alias (called a **link label**) that you use instead. Then, at the bottom of the file, you define what that link label references.
+
+If you're familiar with variables, it's a similar concept — the label is like a variable name, and the full URL is the value.
+
+### Syntax for link in main body of content
+
+You enter reference links like this:
+
+```markdown
+See the [link text][link label]
+```markdown
+For example:
+```markdown
+See the [documentation][docs].
+```markdown
+That part goes in the main body of your text, where you want the link to appear.
+
+When you publish, it will appear as:
+
+See the [documentation][docs].
+
+Notice that the link text becomes a link. The target of the link is whatever was defined as the value of the link label (which we'll look at next).
+
+### Syntax to define the target of the link
+
+At the bottom of your markdown file, define what the [link label] represents (the target for the link). For that, use this syntax:
+```markdown
+[link label]: URL
+```markdown
+For example:
+```markdown
+[docs]:https://www.somewebsite/com.docs
+```markdown
+The link label definitions will not appear in your published content.
+
+
+
+
+### Defining link labels in a separate file
+
+It's also possible to have the link label definitions in a separate file, rather than in the individual markdown files. 
+
+The concept is:
+1. You create your markdown files and include links. Instead of defining the values for the link labels at the bottom of your markdown files, you define them in a separate file. 
+2. Also in your markdown files, you include an instruction to tell your static site generator (SSG) to import the file that contains the link label definitions.
+3. In a separate file, you add the link labels and the addresses they should link to.
+
+This approach can make it easier to manage links to scale. But it is not supported in Markdown. Rather, it is available in some SSGs, but not all. For this reason, I won't cover it here, but it is good to be aware that it is possible.
+
+
+
+## Which type of links to use?
+
+I asked several other technical writers and they said they preferred to use inline links. They didn't like having to scroll down to the bottom of the file to see the link target, which can often provide context. But that way will make it slightly more complicated to update the links at a later date, if needed.
+
+Personally, I would choose one way and stick to it consistently. Mixing the two approaches seems like it could cause extra work later on. Consistency wins.
+
+<!-- references-->
+[docs]: https://www.somewebsite.com/docs

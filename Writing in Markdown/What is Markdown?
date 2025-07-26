@@ -1,0 +1,13 @@
+Markdown is a writing format that you write in plain text. You can create it in pretty much any text editor. It is a simple, human readable format that is widely familiar to developers.
+
+There is not an official markdown standard. Instead, there are several different variations, which people often call "flavours". The flavors extend the original Markdown model to include additional features. The most commonly used flavor is "GitHub-flavored Markdown".
+
+
+Is it the best format for technical documentation? Arguably not, as other markup languages are more capable of providing the structures that we technical writers need. But markup does have some advantages in that it is:
+* Simple
+* Lightweight
+* Widely supported
+* Already known or easy to learn for developers, engineers, and technical writers. 
+* A good option for documentation that needs to be more collaborative.
+
+StackEdit.io is an online editor that is free and supports markdown flavors.

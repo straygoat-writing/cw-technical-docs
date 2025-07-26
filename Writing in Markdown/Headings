@@ -1,0 +1,8 @@
+# Headings
+There are different ways of marking up headings. My preferred way is to add a hash tag followed by a space before the heading text for heading 1, two hashtags for heading 2 and so on.
+
+Another way is to add equals signs under the heading 1 text and dashes (hyphens) under the heading 2 text. It doesn't matter how many equals or dash characters you use, as long as you only add that character to the line and then press return. 
+
+I can't see the point of using equals and dash when you have to use hashtags for levels 3 onwards anyway. Using hashtags for all heading levels would be more consistent.
+## Heading levels
+There are a maximum of 6 heading levels in Markdown. If you're getting beyond 4, there's possibly an issue with your content structure and you might want to rethink how it is organized.

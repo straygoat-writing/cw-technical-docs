@@ -1,0 +1,8 @@
+# Get the preview pane in Visual Code Studio
+To open the preview panel in Visual Code Studio:
+1. Either:
+Press `Ctrl+Shift+P` on Windows
+Press `Cmd+Shift+P` on Mac
+2. Type:
+Markdown:Open Preview.
+3. Press Enter.

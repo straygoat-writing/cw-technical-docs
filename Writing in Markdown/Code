@@ -1,0 +1,62 @@
+# Code
+There are two ways of including code in markdown:
+* Inline code
+* Code blocks
+
+If supported by your static site generator (SSG), you can also use syntax highlighting with code blocks. 
+
+
+## Inline code
+Inline code is content that appears in a monospace font with a shaded background on the same line as previous/following paragraph text. You use it to include a short snippet of code in a line of text in a paragraph. To make inline code, surround your code with backticks. 
+
+For example:
+
+<pre>Use the `cd` command to change the directory in Git.</pre> 
+
+Result:
+
+Use the `cd` command to change directory in Git.
+## Code blocks
+Code blocks are multiple lines of code that are inset in a block, like an indented paragraph. For a code block, use three backticks before and after your code.  The backticks need to be on their own line, like this:
+
+``` 
+This is a code block. It will display exactly as typed, with no colors or special formatting. for example: def hello(): print("Hello, world!") 
+```
+
+Typically, code blocks are used with [syntax highlighting].(#syntax-highlighting)
+
+
+## Syntax highlighting
+Syntax highlighting adds colors and styles to code markup so that it easier to read and looks different to your regular text.
+Plain markdown doesn't support syntax highlighting, but it is available in GitHub Flavored Markdown (GFM). You'll be able to use it as long as your static site generator (SSG) supports GFM (and most do).
+
+To use syntax highlighting add the name of the programming language directly after the three forward slashes. It should be on the same line as the forward slashes, like this:
+````
+```python
+def greet():
+    print("Hello, world!")
+```
+````
+**Result:**
+```python
+def greet():
+    print("Hello, world!")
+```
+Here is another example, this time using CSS:
+````
+```css
+.red-flag {
+  color: red;
+  text-decoration: underline;
+  text-decoration-color: black;
+}
+```
+````
+**Result:**
+```css
+.red-flag {
+  color: red;
+  text-decoration: underline;
+  text-decoration-color: black;
+}
+```

@@ -1,0 +1,13 @@
+# Paragraphs
+Press return twice to separate two paragraphs, like this:
+
+
+This is paragraph 1. I am going to press return twice now ...
+
+This is paragraph 2.
+
+## Line breaks
+For a line break, there are several different ways of doing it. You can add two spaces at the end of the line followed by return. Another way is to enter a backslash and then press return. Or include an HTML break tag <br />.
+
+This is a line that is going to break with two spaces  
+followed by return. I will add the two spaces after the first use of "two spaces" in the paragraph.

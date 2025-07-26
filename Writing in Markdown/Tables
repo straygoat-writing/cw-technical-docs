@@ -1,0 +1,119 @@
+# Tables
+Tables are not supported in plain Markdown, but they are included as an extension in GitHub Flavored Markdown (GFM). Most static site generators support or partially support GFM by default or via plugins and extensions.
+
+Tables are basic in markdown, so you may need to use HTML tables instead, see [Limitations](#limitations).
+
+## Limitations
+Tables are _very_ basic in Markdown.  
+
+✅ Header row
+✅ Columns
+✅ Rows
+✅ Column alignment
+
+
+❌ Formatting inside cells, such as bold
+❌ Nested tables
+❌ Spanning
+❌ Merging
+❌ Complex layouts
+❌ Automatic wrapping or text overflow
+❌ Sorting
+❌ Filtering
+❌ Links and images in cells
+❌ Classes for styling with CSS/JS
+
+If you need complex tables with features that are not supported in Markdown, you may be able to add them as HTML. This is dependent on HTML tables being supported by your Static Site Generator.
+
+## Create a table in markdown
+The following sections explain how to add columns, rows and headers and set the column alignment. I'll include an example at the end.
+
+### Columns
+Use the pipe character to | mark the **start and end of a column**.
+```
+|Column 1|Column 2|
+```
+### Headers
+Use a line of dashes after the first row to mark that row as the **table header**.
+```
+|Column 1|Column 2|
+|--------|--------|
+```
+Note that you also need the pipes to create the structure of the row.
+
+### Rows
+Create each **row** on a new line.
+```
+| Column 1 | Column 2 |
+|----------|----------|
+|Row 1A    | Row 1B   |
+```
+
+### Alignment
+
+Use a colon at the left side of a column header cell to align the entire column to the left. Left-aligned is the default.
+```
+| Column 1 | Column 2 |
+| :--------| ---------|
+|Row 1A    | Row 1B   |
+```
+**Result:**
+Column 1 is aligned to the left. So is Column 2, even though it does not have a colon. This is because left-alignment is the default for tables.
+
+| Column 1 | Column 2 |
+| :--------| ---------|
+|Row 1A    | Row 1B   |
+
+
+Use a colon at the right side of a column header cell to align the entire column to the right.
+```
+| Column 1 | Column 2 |
+|----------|---------:|
+|Row 1A    | Row 1B   |
+```
+**Result:**
+The Column 2 is aligned to the right.
+| Column 1 | Column 2 |
+|----------|---------:|
+|Row 1A    | Row 1B   |
+
+
+Use a colon at both sides of a column header cell to align the entire column centrally.
+```
+| Column 1 | Column 2 |
+|:--------:|:--------:|
+|Row 1A    | Row 1B   |
+```
+**Result:**
+Both columns are aligned centrally.
+| Column 1 | Column 2 |
+|:--------:|:--------:|
+|Row 1A    | Row 1B   |
+
+
+
+
+## Example table
+Here is an example of a simple table with 3 columns and 4 rows. The first column is left aligned (the colon is not really needed as the default is left-aligned), the second column is centered, and the third column is right-aligned.
+```
+| Column 1 | Column 2 | Column 3 |
+|:----------|:----------:|---------:|
+| Row 1A   | Row 1B   | Row 1C   |
+| Row 2A   | Row 2B   | Row 2C   |
+| Row 3A   | Row 3B   | Row 3C   |
+| Row 4A   | Row 4B   | Row 4C   |
+| Row 5A   | Row 5B   | Row 5C   |
+| Row 6A   | Row 6B   | Row 6C   |
+
+```
+**Result:** 
+
+| Column 1 | Column 2 | Column 3 |
+|:----------|:----------:|---------:|
+| Row 1A   | Row 1B   | Row 1C   |
+| Row 2A   | Row 2B   | Row 2C   |
+| Row 3A   | Row 3B   | Row 3C   |
+| Row 4A   | Row 4B   | Row 4C   |
+| Row 5A   | Row 5B   | Row 5C   |
+| Row 6A   | Row 6B   | Row 6C   |
+

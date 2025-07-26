@@ -1,0 +1,39 @@
+# Emphasis
+There are different types of emphasis supported in basic Markdown:
+Italic
+Bold
+
+## Italic
+For italic text, use an asterisk * before and after the terms you want to emphasize. Alternatively, you can use an underscore before and after the terms _ but this may be more likely to cause issues later down the line, especially if you need to write about files that use underscores in their filenames. 
+
+Guess which word I'm going to make appear in *italicized* text?
+
+I don't use italics very often as they can be difficult for some dyslexic people to read. The British Dyslexia Association states:
+
+"Avoid underlining and italics as this can make the text appear to run together and cause crowding. Use bold for emphasis. (Dyslexia Style Guide 2022)."
+
+The GOV.UK design system also states:
+
+"Don't use italics, as this text can be difficult for dyslexic users to read".
+
+## Bold
+Use double asterisk before and after the terms you want to emphasize. I'd commonly use this strong bold text for the names of options that users need to select.
+
+1. Select **Open**.
+2. Select **Auto-render**.
+3. Select **Save** when the rendering is complete.
+
+You can use double underscores instead of double asterisk.
+
+## What if you want the emphasis character to appear in your text?
+If you want a character that is used for emphasis to appear in your text, you will need to "escape" it. Use the backslash character ( \\ ) immediately before the character you want to keep. 
+
+For example, you might have a sentence that contains underscores as part of a file name and you want those to be visible in the text, not used as emphasis. For that, you would put a backslash before the underscores.
+
+Enter the type with an underscore prefix and suffix, like this:
+
+`\_type\_ `
+
+Result:
+
+\_type\_ 

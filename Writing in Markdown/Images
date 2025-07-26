@@ -1,0 +1,91 @@
+# Images
+The handling of images in plain markdown is limited. You can insert an image, but you can't control its size.
+
+If you need to control the size, use HTML `<img>` tags to insert the image in your markdown instead.
+
+Note: If you're using MDX (like Docusaurus) you can use React image components for more control.
+
+Here, I'm going to focus on plain markdown.
+
+## Inline images
+To add an inline image:  
+Enter an exclamation mark followed by square brackets. Inside the brackets, enter the alt text for the image. After the brackets add parentheses. Enter the address of the image inside the parentheses.
+
+For example:
+
+```markdown
+
+![Dumbell photo from Mika Baumeister on Unsplash](https://plus.unsplash.com/premium_photo-1671028546491-f70b21a32cc2?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)
+
+```
+
+Results in:
+
+![Dumbell photo from Mika Baumeister on Unsplash](https://plus.unsplash.com/premium_photo-1671028546491-f70b21a32cc2?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)
+
+## Referenced images
+These work in a similar way to [reference links](./Links). You define an image label and set its value to be the address of the image. Then, in your text, you can add a simple reference to the image label instead of the full address each time.
+
+They can be more efficient than inline images, as you don't need to enter the address for the image each time you reference it. Instead you define it once a the bottom and then reference the image label.
+
+### Define the image label and address
+
+You need to define a label for the image, typically at the bottom of your markdown file. 
+
+Use this format:
+```
+[image label name]: URL "alt text"
+```
+For example:
+
+
+```
+[Dumbells]: https://plus.unsplash.com/premium_photo-1671028546491-f70b21a32cc2?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D "Dumbell photo from Mika Baumeister on Unsplash"
+
+```
+
+### Reference the image label
+In your markdown body content, insert a reference to the image label using this format:
+
+```
+![Alt text][name of image label]
+```
+For example:
+```
+
+![Dumbell photo from Mika Baumeister on Unsplash][Dumbells]
+
+```
+
+The computer will:
+1. Detect the image label reference in your text. 
+2. Search in the label definitions at the bottom to find out what image to use. 
+3. Insert the appropriate image at the points where that image label reference appears.
+
+So for the image below, I:
+1. Defined a "Dumbells" image label at the bottom of this document. (The image label reference information does not get rendered).
+2. Added the following reference in the body text, below this procedure:
+    ```
+    ![Dumbell photo from Mika Baumeister on Unsplash][Dumbells]
+    ```
+The line below is where the image will appear.
+
+![Dumbell photo from Mika Baumeister on Unsplash][Dumbells]
+
+
+
+[Dumbells]: https://plus.unsplash.com/premium_photo-1671028546491-f70b21a32cc2?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D "Dumbell photo from Mika Baumeister on Unsplash"
+
+## Controlling the size of images
+In plain markdown, there's no way to control the size. But as most markdown engines support HTML, you can use that to control the size, for example:
+```
+<img src="url" alt="alt" width="400"/>
+```
+The width attribute in standard HTML only accepts widths in pixel values or numeric values. 
+
+To get percentage widths, use inline CSS styles, like this:
+```
+<img src="url" alt="alt" style="width:60%;" />
+```
+Note: If you use HTML or CSS to add images, you use those _instead of the plain markdown references_.
+

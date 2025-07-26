@@ -1,0 +1,31 @@
+# GitHub flavor markdown
+GitHub Flavored Markdown (GFM) adds some extra features on top of plain Markdown. These include:
+* Tables
+* Task lists (checkboxes)
+* Strikethrough
+* Autolinks
+* @ mentions for users or teams
+* Emojis
+* Syntax highlighting for code
+
+It also stops certain HTML tags from working for security reasons.
+
+I will cover the extra features in their own individual articles. 
+
+
+## What HTML is not supported?
+The following HTML tags are not supported:
+```
+<script>
+<style>
+<iframe>
+<embed>, <object>, <applet>
+<form>, <input>, <button>, <select>
+<link>
+<meta>
+<title>, <head>, <html>, <body>
+<frame>, <frameset>
+<video>, <audio>
+```
+Inline CSS styles are supported in some rendering tools and Static Site Generators, but not all. For example, they are supported in Docusaurus but are stripped out on GitHub.com.
+

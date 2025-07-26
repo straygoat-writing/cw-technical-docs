@@ -1,0 +1,81 @@
+# Lists
+Let's look at creating bullet lists, numbered lists, and nested versions of both list types.
+ 
+## Unordered list
+Start each line with an asterisk, plus symbol, or dash. Put a space after the character you used and then enter your text.
+
+```
+* List item 1
+* List item 2
+* List item 3
+
+
+```
+Result:
+* List item 1
+* List item 2
+* List item 3 
+  
+### Nested unordered list
+To create a nested unordered list, create the upper level list item and then add another line. Start that line with 2 spaces or 4 spaces and then add a new list item using asterisk, plus symbol or dash.
+
+````
+* List item 1
+* List item 2
+  * List 2.1 Item 1
+  * List 2.1 Item 2
+* List item 3
+* List item 4
+````
+
+Result:
+* List item 1
+* List item 2
+  * List 2.1 Item 1
+  * List 2.1 Item 2
+* List item 3
+* List item 4
+
+
+## Ordered list (number list)
+Enter the number followed by a full stop and a space.You don't need to use correct numbering in Markdown as they will render in order, but it makes more sense to use the correct numbers, right?
+
+````
+1. List item 1
+2. List item 2
+3. List item 3
+````
+
+### Nested ordered list
+It works in the same way as nested unordered lists. Start the upper level list and then, on the line for the next list item, add 2 or 4 spaces at the start.
+
+````
+1. First item
+    1. Subitem 1
+    1. Subitem 2
+1. Second item
+````
+
+Result:
+1. First item
+   1. Subitem 1
+   1. Subitem 2
+1. Second item
+
+## Mixing the list styles
+You can have bullet lists inside a numbered list and vice-versa. Again, just use 2 or 4 spaces to indent and then use the appropriate character for the list, such as asterisk or dash.
+````
+1. Step one
+   * Item 1
+   * Second detail
+2. Step two
+   * Another point
+   * More info
+````
+Result:
+1. Step one
+   - First detail
+   - Second detail
+2. Step two
+   - Another point
+   - More info
