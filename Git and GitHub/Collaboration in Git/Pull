@@ -1,0 +1,74 @@
+# Pull
+
+Use the git pull command to download changes from the remote repository into your local working copy. This updates your local copy with the latest commits from the remote repo.
+
+When you do a pull, git compares the remote version of the file with your local version of the file. 
+
+Here is how it handles what comes next:
+
+* If the remote version of the file has not changed since the last time you pulled it, git leaves your local file alone. There's no need to update your local file as there's nothing new in the remote file.
+* If the remote file has changed, but you have not made changes to your local file, git will replace your local file with the remote file.
+* If there have been updates to the remote file *and* you have made changes to your local file, Git will **merge** the content.
+
+**Note:** You cannot do a git pull unless you have committed your changes.
+
+## Merging remote content and local content
+
+A merge happens when you pull a remote file from GitHub and it has conflicts with your local version of the file. If there are differences and they do not conflict, Git will merge the file automatically. For example, if the remote version had updates to lines 4 and 5 and your local version has updates to lines 10 and 11, Git merges the files so that all of the lines have the latest changes. There's no conflict as the local updates are on different lines to the remote updates.
+
+But what if there are remote and local updates *on the same lines*? This is called a *merge conflict* and Git doesn't know how to merge the files automatically. It needs human intervention to determine which changes should be kept. In this scenario, Git:
+
+* Notifies you that there are conflicts
+* Includes the old and new lines in the file and marks them with chevrons <<< >>> (greater than, less than symbols). The local version is usually shown first with the remote version shown below it.
+
+You then need to edit the file and decide which changes to keep.
+
+
+
+
+
+
+Conflicts can happen when two (or more) writers make changes to the same lines in a file and GitHub can't determine which changes it should keep.
+
+When Git detects a conflict, it puts the old and new lines into the file and marks them with left-and-right chevrons <<<  >>> (greater than, less than symbols).
+
+You then need to edit the file and choose how you want to merge the content:
+
+* Keep your local changes and delete the other changes
+* Keep the remote changes and delete your local changes
+* Keep a mix of the local and remote changes.
+
+
+For example, let's say you are working on "calibration.md" locally. A colleague is also working on "calibration.md" on their computer. Your colleague finishes their work and pushes (uploads) their changes to GitHub.  You "pull" their changes to get the latest version in your local file. At that point, Git detects that you and your colleague have both made changes to the same lines of text. Git can't tell which changes should be kept.
+
+
+
+
+
+
+Example Scenario with Markdown:
+Imagine you and someone else are working on README.md.
+
+You make a change locally:
+
+md
+Copy
+Edit
+## Introduction
+This guide explains how to use our software.
+Meanwhile, someone else pushes a change to GitHub:
+
+md
+Copy
+Edit
+## Introduction
+This documentation will help you get started quickly.
+Now when you pull their changes into your local branch, Git sees that both of you edited the same section and doesn’t know which version to keep. So it marks a merge conflict.
+
+
+
+## Pull content in Visual Studio Code
+
+## Using terminal to pull content
+
+## 
