@@ -79,3 +79,13 @@ Result:
 2. Step two
    - Another point
    - More info
+
+## Task Lists (Checkboxes)
+
+These are only available if you use GitHub Flavored Markdown (GFM).
+
+Enter square brackets for the checkboxes. To have a box checked by default, enter an X inside the square brackets.
+
+- [x] Write docs
+- [ ] Review PR
+- [ ] Ship release
